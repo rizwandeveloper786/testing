@@ -1,0 +1,37 @@
+.footer {
+  background-color: #95c0ea; /* Light background for the footer */
+  padding: 20px; /* Padding around the footer */
+  text-align: left; /* Align text to the left */
+}
+
+.container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out sections evenly */
+  max-width: 1200px; /* Max width for the footer */
+  margin: 0 auto; /* Center the footer */
+}
+
+.section {
+  flex: 1; /* Each section takes equal space */
+  margin: 0 20px; /* Margin between sections */
+}
+
+.sectionHeader {
+  font-size: 1.2em; /* Font size for section headers */
+  margin-bottom: 10px; /* Space below headers */
+}
+
+.sectionList {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.listItem {
+  margin: 5px 0; /* Space between list items */
+  cursor: pointer; /* Indicate clickable items */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+
+.listItem:hover {
+  color: #0070f3; /* Change color on hover */
+}
