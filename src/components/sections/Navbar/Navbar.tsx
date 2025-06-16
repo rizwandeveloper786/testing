@@ -18,38 +18,9 @@ export default function Navbar() {
           <Link href="/">ShifaVeda</Link>
         </div>
 
-        
-
-        {/* Icons (always visible) */}
-        <ul className="flex items-center gap-5 text-white text-xl ml-4 md:ml-0">
-          <li>
-            <Link href="/login" className="hover:text-yellow-500">
-              <FaUser />
-            </Link>
-          </li>
-          <li>
-            <Link href="/search" className="hover:text-yellow-500">
-              <FaSearch />
-            </Link>
-          </li>
-          <li>
-            <Link href="/cart" className="hover:text-yellow-500">
-              <FaShoppingCart />
-            </Link>
-          </li>
-          {/* Mobile toggle button */}
-        <button
-          className="md:hidden text-white mt-2 text-2xl"
-          onClick={() => setMenuOpen(!menuOpen)}
-        >
-          ☰
-        </button>
-        </ul>
-      </div>
-
-      {/* Navigation Links */}
+        {/* Navigation Links */}
       <ul
-        className={`flex flex-col md:flex-row gap-6 px-4 md:px-0 py-4 md:py-2 md:items-center md:justify-center bg-green-700 md:bg-transparent transition-all duration-300 ease-in-out z-50 ${
+        className={`flex flex-col md:flex-row gap-6 px-4 md:px-0  md:py-2 md:items-center md:justify-center bg-green-700 md:bg-transparent transition-all duration-300 ease-in-out z-50 ${
           menuOpen ? 'block' : 'hidden md:flex'
         }`}
       >
@@ -119,6 +90,35 @@ export default function Navbar() {
           </Link>
         </li>
       </ul>
+
+        {/* Icons (always visible) */}
+        <ul className="flex items-center gap-5 text-white text-xl ml-4 md:ml-0">
+          <li>
+            <Link href="/login" className="hover:text-yellow-500">
+              <FaUser />
+            </Link>
+          </li>
+          <li>
+            <Link href="/search" className="hover:text-yellow-500">
+              <FaSearch />
+            </Link>
+          </li>
+          <li>
+            <Link href="/cart" className="hover:text-yellow-500">
+              <FaShoppingCart />
+            </Link>
+          </li>
+          {/* Mobile toggle button */}
+        <button
+          className="md:hidden text-white mt-2 text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+        </ul>
+      </div>
+
+      
     </nav>
   );
 }

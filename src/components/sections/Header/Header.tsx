@@ -2,10 +2,10 @@
 'use client';
 
 import Link from 'next/link';
-import { useCartStore } from '@/lib/hooks/useCartStore';
+// import { useCartStore } from '@/lib/hooks/useCartStore';
 
 export default function Header() {
-  const { cart } = useCartStore();
+  // const { cart } = useCartStore();
   return (
     <header className="bg-shifavedaGreen text-black p-4">
       <nav className="container mx-auto flex justify-between items-center">
@@ -14,7 +14,7 @@ export default function Header() {
             ShifaVeda
           </Link>
         </div>
-        <div>Cart ({cart.length})</div>
+        {/* <div>Cart ({cart.length})</div> */}
       </nav>
     </header>
   );
