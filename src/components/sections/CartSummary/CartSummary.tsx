@@ -1,7 +1,7 @@
 import { Product } from '@/types/product';
 import { formatPrice } from '@/lib/utils/formatPrice';
 import Button from '@/components/ui/Button/Button';
-import { useCartStore } from '@/lib/hooks/useCart';
+import { useCartStore } from '@/lib/hooks/useCartStore';
 import Link from 'next/link';
 
 interface CartSummaryProps {
