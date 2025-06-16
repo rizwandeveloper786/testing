@@ -14,7 +14,7 @@ export default function Header() {
             ShifaVeda
           </Link>
         </div>
-        {/* <div>Cart ({cart.length})</div> cart का उपयोग */}
+        <div>Cart ({cart.length})</div>
       </nav>
     </header>
   );
