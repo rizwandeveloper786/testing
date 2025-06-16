@@ -9,12 +9,12 @@ export default function Header() {
   return (
     <header className="bg-shifavedaGreen text-black p-4">
       <nav className="container mx-auto flex justify-between items-center">
-        <div className="flex-shrink-0">
-          <Link href="/" className="text-2xl font-bold text-black">
+        <div className="flex-shrink-0 mx-auto">
+          <Link href="/" className="text-2xl font-bold text-black text-center">
             ShifaVeda
           </Link>
         </div>
-        <div>Cart ({cart.length})</div> {/* cart का उपयोग */}
+        {/* <div>Cart ({cart.length})</div> cart का उपयोग */}
       </nav>
     </header>
   );

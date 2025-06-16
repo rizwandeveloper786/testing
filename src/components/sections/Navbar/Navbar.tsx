@@ -1,144 +1,390 @@
-import Link from 'next/link';
-import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
-import styles from './Navbar.module.css';
-import Image from 'next/image'; // Import Image from next/image
+// import Link from 'next/link';
+// import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
+// import styles from './Navbar.module.css';
+// import Image from 'next/image'; // Import Image from next/image
 
-const Navbar = () => {
+// const Navbar = () => {
+//   return (
+//     <nav className={styles.navbar}>
+//       <div className={styles.logo}>
+//         <Link href="/" className='text-white'>ShifaVeda</Link>
+//       </div>
+//       <ul className={styles.navLinks}>
+//         <li className={styles.shopLink}>
+//           <Link href="/shop" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} // Set width for the image
+//               height={50} // Set height for the image
+//             />
+//             <p>Shop</p>
+//           </Link>
+//         </li>
+//         <li className={styles.dropdownContainer}>
+//           <Link href="/products" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} 
+//               height={50} 
+//             />
+//             <p>All Products</p>
+//           </Link>
+
+//           <ul className={styles.dropdown}>
+//             <li>
+//               <Link href="/products/skin-care-hair-care">
+//                 Skin Care & Hair Care
+//               </Link>
+//             </li>
+//             <li>
+//               <Link href="/products/weight-power">Weight & Power</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/daily-intimate">Daily Intimate</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/daily-health">Daily Health</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/combos">Combos</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/best-sellers">Best Sellers</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/last-longer">Last Longer</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/better-erections">Better Erections</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/condoms-lubes">Condoms & Lubes</Link>
+//             </li>
+//             <li>
+//               <Link href="/products/perfumes">Perfumes</Link>
+//             </li>
+//           </ul>
+//         </li>
+//         <li>
+//           <Link href="/category" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} 
+//               height={50} 
+//             />
+//             <p>Category</p>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/combos" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} 
+//               height={50} 
+//             />
+//             <p>Combos</p>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/best-sellers" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} 
+//               height={50} 
+//             />
+//             <p>Best Sellers</p>
+//           </Link>
+//         </li>
+//         <li>
+//           <Link href="/blogs" className={styles.linkItems}>
+//             <Image 
+//               src="/images/shop.webp" 
+//               alt="Shop" 
+//               className={styles.shopIcon} 
+//               width={50} 
+//               height={50} 
+//             />
+//             <p>Blogs</p>
+//           </Link>
+//         </li>
+//       </ul>
+//       <div className={styles.icons}>
+//         <li>
+//           <Link href="/login" className={styles.icon}>
+//             <FaUser className={styles.size} />
+//           </Link>
+//         </li>
+
+//         <li>
+//           <Link href="/search" className={styles.icon}>
+//             <FaSearch className={styles.size} />
+//           </Link>
+//         </li>
+
+//         <li>
+//           <Link href="/cart" className={styles.icon}>
+//             <FaShoppingCart className={styles.size} />
+//           </Link>
+//         </li>
+//       </div>
+//     </nav>
+//   );
+// };
+
+// export default Navbar;
+
+
+// 'use client';
+
+// import Link from 'next/link';
+// import Image from 'next/image';
+// import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
+// import { useState } from 'react';
+
+// export default function Navbar() {
+//   const [menuOpen, setMenuOpen] = useState(false);
+
+//   return (
+//     <nav className="bg-green-700 text-white shadow-md">
+//       <div className="max-w-8xl mx-auto px-4 py-3 flex justify-between items-center relative">
+//         {/* Logo */}
+//         <div className="text-2xl font-bold">
+//           <Link href="/">ShifaVeda</Link>
+//         </div>
+
+//         {/* Mobile toggle button */}
+//         <button
+//           className="md:hidden text-white text-2xl"
+//           onClick={() => setMenuOpen(!menuOpen)}
+//         >
+//           ☰
+//         </button>
+
+//         {/* Navigation Links */}
+//         <ul
+//           className={`flex flex-col md:flex-row gap-6 absolute md:static top-full left-0 w-full md:w-auto bg-green-700 md:bg-transparent px-4 md:px-0 py-4 md:py-0 transition-all duration-300 ease-in-out z-50 ${
+//             menuOpen ? 'block' : 'hidden md:flex'
+//           }`}
+//         >
+//           {/* Shop */}
+//           <li>
+//             <Link href="/shop" className="flex flex-col items-center justify-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="Shop" width={40} height={40} />
+//               <p>Shop</p>
+//             </Link>
+//           </li>
+
+//           {/* All Products with Dropdown */}
+//           <li className="relative group">
+//             <Link href="/products" className="flex flex-col items-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="All Products" width={40} height={40} />
+//               <p>All Products</p>
+//             </Link>
+
+//             <ul className="absolute hidden group-hover:block bg-white text-black w-56 shadow-lg mt-2 rounded z-40">
+//               {[
+//                 ['skin-care-hair-care', 'Skin Care & Hair Care'],
+//                 ['weight-power', 'Weight & Power'],
+//                 ['daily-intimate', 'Daily Intimate'],
+//                 ['daily-health', 'Daily Health'],
+//                 ['combos', 'Combos'],
+//                 ['best-sellers', 'Best Sellers'],
+//                 ['last-longer', 'Last Longer'],
+//                 ['better-erections', 'Better Erections'],
+//                 ['condoms-lubes', 'Condoms & Lubes'],
+//                 ['perfumes', 'Perfumes'],
+//               ].map(([slug, label]) => (
+//                 <li key={slug}>
+//                   <Link
+//                     href={`/products/${slug}`}
+//                     className="block px-4 py-2 hover:bg-gray-100"
+//                   >
+//                     {label}
+//                   </Link>
+//                 </li>
+//               ))}
+//             </ul>
+//           </li>
+
+//           {/* Other nav items */}
+//           <li>
+//             <Link href="/category" className="flex flex-col items-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="Category" width={40} height={40} />
+//               <p>Category</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/combos" className="flex flex-col items-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="Combos" width={40} height={40} />
+//               <p>Combos</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/best-sellers" className="flex flex-col items-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="Best Sellers" width={40} height={40} />
+//               <p>Best Sellers</p>
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/blogs" className="flex flex-col items-center gap-2 hover:text-yellow-300">
+//               <Image src="/images/shop.webp" alt="Blogs" width={40} height={40} />
+//               <p>Blogs</p>
+//             </Link>
+//           </li>
+//         </ul>
+
+//         {/* Icons (right side) */}
+//         <ul className="hidden md:flex items-center gap-5 text-white text-xl">
+//           <li>
+//             <Link href="/login" className="hover:text-yellow-500">
+//               <FaUser />
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/search" className="hover:text-yellow-500">
+//               <FaSearch />
+//             </Link>
+//           </li>
+//           <li>
+//             <Link href="/cart" className="hover:text-yellow-500">
+//               <FaShoppingCart />
+//             </Link>
+//           </li>
+//         </ul>
+//       </div>
+//     </nav>
+//   );
+// }
+
+'use client';
+
+import Link from 'next/link';
+import Image from 'next/image';
+import { FaUser, FaSearch, FaShoppingCart } from 'react-icons/fa';
+import { useState } from 'react';
+
+export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className={styles.navbar}>
-      <div className={styles.logo}>
-        <Link href="/" className='text-white'>ShifaVeda</Link>
+    <nav className="bg-green-600 text-white shadow-md">
+      <div className="max-w-8xl mx-auto px-4 py-3 flex justify-between items-center relative">
+        {/* Logo */}
+        <div className="text-2xl font-bold">
+          <Link href="/">ShifaVeda</Link>
+        </div>
+
+        
+
+        {/* Icons (always visible) */}
+        <ul className="flex items-center gap-5 text-white text-xl ml-4 md:ml-0">
+          <li>
+            <Link href="/login" className="hover:text-yellow-500">
+              <FaUser />
+            </Link>
+          </li>
+          <li>
+            <Link href="/search" className="hover:text-yellow-500">
+              <FaSearch />
+            </Link>
+          </li>
+          <li>
+            <Link href="/cart" className="hover:text-yellow-500">
+              <FaShoppingCart />
+            </Link>
+          </li>
+          {/* Mobile toggle button */}
+        <button
+          className="md:hidden text-white mt-2 text-2xl"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </button>
+        </ul>
       </div>
-      <ul className={styles.navLinks}>
-        <li className={styles.shopLink}>
-          <Link href="/shop" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} // Set width for the image
-              height={50} // Set height for the image
-            />
+
+      {/* Navigation Links */}
+      <ul
+        className={`flex flex-col md:flex-row gap-6 px-4 md:px-0 py-4 md:py-2 md:items-center md:justify-center bg-green-700 md:bg-transparent transition-all duration-300 ease-in-out z-50 ${
+          menuOpen ? 'block' : 'hidden md:flex'
+        }`}
+      >
+        {/* Shop */}
+        <li>
+          <Link href="/shop" className="flex flex-col items-center justify-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="Shop" width={40} height={40} />
             <p>Shop</p>
           </Link>
         </li>
-        <li className={styles.dropdownContainer}>
-          <Link href="/products" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} 
-              height={50} 
-            />
+
+        {/* All Products with Dropdown */}
+        <li className="relative group">
+          <Link href="/products" className="flex flex-col items-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="All Products" width={40} height={40} />
             <p>All Products</p>
           </Link>
 
-          <ul className={styles.dropdown}>
-            <li>
-              <Link href="/products/skin-care-hair-care">
-                Skin Care & Hair Care
-              </Link>
-            </li>
-            <li>
-              <Link href="/products/weight-power">Weight & Power</Link>
-            </li>
-            <li>
-              <Link href="/products/daily-intimate">Daily Intimate</Link>
-            </li>
-            <li>
-              <Link href="/products/daily-health">Daily Health</Link>
-            </li>
-            <li>
-              <Link href="/products/combos">Combos</Link>
-            </li>
-            <li>
-              <Link href="/products/best-sellers">Best Sellers</Link>
-            </li>
-            <li>
-              <Link href="/products/last-longer">Last Longer</Link>
-            </li>
-            <li>
-              <Link href="/products/better-erections">Better Erections</Link>
-            </li>
-            <li>
-              <Link href="/products/condoms-lubes">Condoms & Lubes</Link>
-            </li>
-            <li>
-              <Link href="/products/perfumes">Perfumes</Link>
-            </li>
+          <ul className="absolute hidden group-hover:block bg-white text-black w-56 shadow-lg mt-2 rounded z-40">
+            {[
+              ['skin-care-hair-care', 'Skin Care & Hair Care'],
+              ['weight-power', 'Weight & Power'],
+              ['daily-intimate', 'Daily Intimate'],
+              ['daily-health', 'Daily Health'],
+              ['combos', 'Combos'],
+              ['best-sellers', 'Best Sellers'],
+              ['last-longer', 'Last Longer'],
+              ['better-erections', 'Better Erections'],
+              ['condoms-lubes', 'Condoms & Lubes'],
+              ['perfumes', 'Perfumes'],
+            ].map(([slug, label]) => (
+              <li key={slug}>
+                <Link
+                  href={`/products/${slug}`}
+                  className="block px-4 py-2 hover:bg-gray-100"
+                >
+                  {label}
+                </Link>
+              </li>
+            ))}
           </ul>
         </li>
+
+        {/* Other nav items */}
         <li>
-          <Link href="/category" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} 
-              height={50} 
-            />
+          <Link href="/category" className="flex flex-col items-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="Category" width={40} height={40} />
             <p>Category</p>
           </Link>
         </li>
         <li>
-          <Link href="/combos" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} 
-              height={50} 
-            />
+          <Link href="/combos" className="flex flex-col items-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="Combos" width={40} height={40} />
             <p>Combos</p>
           </Link>
         </li>
         <li>
-          <Link href="/best-sellers" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} 
-              height={50} 
-            />
+          <Link href="/best-sellers" className="flex flex-col items-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="Best Sellers" width={40} height={40} />
             <p>Best Sellers</p>
           </Link>
         </li>
         <li>
-          <Link href="/blogs" className={styles.linkItems}>
-            <Image 
-              src="/images/shop.webp" 
-              alt="Shop" 
-              className={styles.shopIcon} 
-              width={50} 
-              height={50} 
-            />
+          <Link href="/blogs" className="flex flex-col items-center gap-1 hover:text-yellow-300">
+            <Image src="/images/shop.webp" alt="Blogs" width={40} height={40} />
             <p>Blogs</p>
           </Link>
         </li>
       </ul>
-      <div className={styles.icons}>
-        <li>
-          <Link href="/login" className={styles.icon}>
-            <FaUser className={styles.size} />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/search" className={styles.icon}>
-            <FaSearch className={styles.size} />
-          </Link>
-        </li>
-
-        <li>
-          <Link href="/cart" className={styles.icon}>
-            <FaShoppingCart className={styles.size} />
-          </Link>
-        </li>
-      </div>
     </nav>
   );
-};
-
-export default Navbar;
+}
