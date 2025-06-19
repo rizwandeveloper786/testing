@@ -3,7 +3,7 @@ import ProductList from '@/components/sections/ProductList/ProductList';
 import { fetchProducts } from '@/lib/api/products';
 
 export const metadata = {
-  title: 'Shifaveda - Home',
+  title: 'Shifaveda',
   description: 'Explore authentic Ayurvedic products',
 };
 
